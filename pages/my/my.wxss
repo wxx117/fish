@@ -1,0 +1,107 @@
+.my-page {
+  padding: 64rpx 32rpx;
+  background: #fff7ec;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 40rpx;
+  border-radius: 48rpx;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f24e2e, #ff8a3d);
+  box-shadow: 0 16rpx 48rpx rgba(242, 78, 46, 0.12);
+}
+
+.avatar {
+  width: 112rpx;
+  height: 112rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 36rpx;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 58rpx;
+}
+
+.nickname {
+  font-size: 40rpx;
+  font-weight: 900;
+}
+
+.level {
+  margin-top: 12rpx;
+  opacity: 0.9;
+  font-size: 26rpx;
+}
+
+.stats-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 28rpx;
+  padding: 32rpx;
+  text-align: center;
+}
+
+.stats-card text {
+  display: block;
+}
+
+.stats-card text:first-child {
+  color: #f24e2e;
+  font-size: 40rpx;
+  font-weight: 900;
+}
+
+.stats-card text:last-child {
+  margin-top: 8rpx;
+  color: #52606d;
+  font-size: 24rpx;
+}
+
+.menu-card {
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 104rpx;
+  padding: 0 32rpx;
+  border-bottom: 1rpx solid #e6e9ed;
+}
+
+.menu-item:last-child {
+  border-bottom: 0;
+}
+
+.menu-item text:first-child {
+  font-size: 30rpx;
+  font-weight: 800;
+}
+
+.menu-item text:last-child {
+  color: #9aa5b1;
+  font-size: 24rpx;
+}
+
+.badge-card {
+  padding: 36rpx;
+  border-radius: 44rpx;
+  color: #ffffff;
+  background: linear-gradient(135deg, #35b46f, #4aa8ff);
+}
+
+.badge-title {
+  font-size: 34rpx;
+  font-weight: 900;
+}
+
+.badge-desc {
+  margin-top: 14rpx;
+  opacity: 0.9;
+  font-size: 26rpx;
+  line-height: 1.55;
+}

@@ -1,0 +1,65 @@
+<view class="container form-page">
+  <view class="page-header">
+    <view class="title">发布打卡</view>
+    <view class="desc">今天的虾况怎么样？真实反馈能帮更多人判断值不值得去。</view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">钓到多少只</view>
+    <view class="counter">
+      <button bindtap="decrease">-</button>
+      <text>{{count}}</text>
+      <button bindtap="increase">+</button>
+    </view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">出虾情况</view>
+    <view class="choice-grid">
+      <button
+        wx:for="{{catchLevels}}"
+        wx:key="*this"
+        class="choice {{selectedLevel === item ? 'selected' : ''}}"
+        data-value="{{item}}"
+        bindtap="selectLevel"
+      >{{item}}</button>
+    </view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">推荐时间段</view>
+    <view class="chips">
+      <text
+        wx:for="{{periods}}"
+        wx:key="*this"
+        class="chip {{selectedPeriod === item ? 'active' : ''}}"
+        data-value="{{item}}"
+        bindtap="selectPeriod"
+      >{{item}}</text>
+    </view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">使用饵料</view>
+    <view class="chips">
+      <text
+        wx:for="{{baits}}"
+        wx:key="*this"
+        class="chip {{selectedBait === item ? 'active' : ''}}"
+        data-value="{{item}}"
+        bindtap="selectBait"
+      >{{item}}</text>
+    </view>
+  </view>
+
+  <view class="form-card card switch-card" bindtap="toggleChild">
+    <view>
+      <view class="label no-margin">适合小朋友吗？</view>
+      <view class="helper">水边安全、设施完整、家长陪同体验好</view>
+    </view>
+    <view class="switch {{childFriendly ? 'on' : ''}}"><view></view></view>
+  </view>
+
+  <view class="upload-box" bindtap="chooseImage">＋ 上传现场照片</view>
+  <button class="primary-btn submit" bindtap="submit">发布打卡</button>
+</view>

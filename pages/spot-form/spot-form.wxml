@@ -1,0 +1,58 @@
+<view class="container form-page">
+  <view class="page-header">
+    <view class="title">发布新钓点</view>
+    <view class="desc">提交后进入审核，通过后会出现在地图和首页推荐中。</view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">钓点名称</view>
+    <input class="input" placeholder="例如：溪边小龙虾垂钓园" />
+  </view>
+
+  <view class="form-card card location-card" bindtap="chooseLocation">
+    <view>
+      <view class="label no-margin">地图定位</view>
+      <view class="helper">点击选择准确位置</view>
+    </view>
+    <view class="location-icon">📍</view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">钓点类型</view>
+    <view class="chips">
+      <text
+        wx:for="{{types}}"
+        wx:key="*this"
+        class="chip {{selectedType === item ? 'active' : ''}}"
+        data-value="{{item}}"
+        bindtap="selectType"
+      >{{item}}</text>
+    </view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">收费信息</view>
+    <input class="input" placeholder="例如：免费 / 28 元每人 / 套餐 68 元起" />
+  </view>
+
+  <view class="form-card card">
+    <view class="label">设施标签</view>
+    <view class="chips">
+      <text
+        wx:for="{{facilities}}"
+        wx:key="key"
+        class="chip {{item.active ? 'active' : ''}}"
+        data-key="{{item.key}}"
+        bindtap="toggleFacility"
+      >{{item.label}}</text>
+    </view>
+  </view>
+
+  <view class="form-card card">
+    <view class="label">补充说明</view>
+    <textarea class="textarea" placeholder="例如：傍晚好钓，带娃注意水边安全，建议带防蚊液" />
+  </view>
+
+  <view class="upload-box" bindtap="chooseImage">＋ 上传环境照片</view>
+  <button class="primary-btn submit" bindtap="submit">提交审核</button>
+</view>

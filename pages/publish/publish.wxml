@@ -1,0 +1,27 @@
+<view class="container publish-page">
+  <view class="page-header">
+    <view class="title">发布</view>
+    <view class="desc">分享你的钓虾发现，让更多虾友少踩坑</view>
+  </view>
+
+  <view class="action-card checkin" bindtap="goCheckin">
+    <view>
+      <view class="action-title">发布打卡</view>
+      <view class="action-desc">记录今天钓到多少只、用什么饵、适不适合带娃</view>
+    </view>
+    <view class="icon">🦞</view>
+  </view>
+
+  <view class="action-card spot" bindtap="goSpotForm">
+    <view>
+      <view class="action-title">发布新钓点</view>
+      <view class="action-desc">提交位置、收费、设施和安全提醒，审核后展示</view>
+    </view>
+    <view class="icon">📍</view>
+  </view>
+
+  <view class="tips card">
+    <view class="tips-title">发布前提醒</view>
+    <view class="tips-text">请勿发布私人鱼塘、禁止进入水域或存在明显安全隐患的地点。带小朋友钓虾时，请家长全程陪同。</view>
+  </view>
+</view>

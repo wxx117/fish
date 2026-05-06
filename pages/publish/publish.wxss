@@ -1,0 +1,82 @@
+.publish-page {
+  padding: 64rpx 32rpx;
+  background: #fff7ec;
+}
+
+.page-header {
+  margin-bottom: 36rpx;
+}
+
+.title {
+  font-size: 56rpx;
+  font-weight: 900;
+}
+
+.desc {
+  margin-top: 14rpx;
+  color: #52606d;
+  font-size: 28rpx;
+  line-height: 1.55;
+}
+
+.action-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 240rpx;
+  padding: 36rpx;
+  margin-bottom: 28rpx;
+  border-radius: 48rpx;
+  color: #ffffff;
+  box-shadow: 0 16rpx 48rpx rgba(242, 78, 46, 0.12);
+}
+
+.action-card.checkin {
+  background: linear-gradient(135deg, #f24e2e, #ff8a3d);
+}
+
+.action-card.spot {
+  background: linear-gradient(135deg, #35b46f, #4aa8ff);
+}
+
+.action-title {
+  font-size: 40rpx;
+  font-weight: 900;
+}
+
+.action-desc {
+  max-width: 460rpx;
+  margin-top: 16rpx;
+  opacity: 0.9;
+  font-size: 26rpx;
+  line-height: 1.55;
+}
+
+.icon {
+  width: 112rpx;
+  height: 112rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 36rpx;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 58rpx;
+}
+
+.tips {
+  padding: 32rpx;
+  margin-top: 20rpx;
+}
+
+.tips-title {
+  color: #f24e2e;
+  font-size: 30rpx;
+  font-weight: 900;
+}
+
+.tips-text {
+  margin-top: 12rpx;
+  color: #52606d;
+  font-size: 26rpx;
+  line-height: 1.6;
+}

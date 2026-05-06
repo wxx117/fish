@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>虾友地图 - 小程序 UI 原型</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="gallery">
+    <section class="phone">
+      <div class="screen home-screen">
+        <header class="hero">
+          <div class="topbar">
+            <button class="city">杭州</button>
+            <div class="search">搜索钓点 / 农家乐</div>
+          </div>
+          <h1>今天去哪儿钓虾？</h1>
+          <p>发现附近真实虾况，周末带娃不踩坑</p>
+        </header>
+
+        <div class="quick-filters">
+          <span class="active">附近</span>
+          <span>免费</span>
+          <span>亲子</span>
+          <span>出虾多</span>
+          <span>停车</span>
+        </div>
+
+        <section class="weather-card">
+          <div>
+            <strong>今日虾况不错</strong>
+            <p>傍晚 17:00 后更容易上虾</p>
+          </div>
+          <div class="crayfish">🦞</div>
+        </section>
+
+        <section class="module">
+          <div class="module-title">
+            <h2>本周热门</h2>
+            <a>查看全部</a>
+          </div>
+          <article class="spot-card large">
+            <div class="spot-image image-1"></div>
+            <div class="spot-info">
+              <h3>溪边小龙虾垂钓园</h3>
+              <div class="tags"><span>出虾多</span><span>亲子友好</span></div>
+              <p>距你 3.2km · 28 元/人 · 12 人刚打卡</p>
+              <div class="score">🦞🦞🦞🦞☆ 4.6</div>
+            </div>
+          </article>
+          <article class="spot-card">
+            <div class="spot-image image-2"></div>
+            <div class="spot-info">
+              <h3>夏湾农庄钓虾池</h3>
+              <div class="tags"><span>有厕所</span><span>可烧烤</span></div>
+              <p>距你 5.8km · 套餐 68 元起</p>
+            </div>
+          </article>
+        </section>
+
+        <nav class="tabbar">
+          <span class="on">首页</span><span>地图</span><span class="publish">＋</span><span>我的</span>
+        </nav>
+      </div>
+      <p class="caption">首页</p>
+    </section>
+
+    <section class="phone">
+      <div class="screen map-screen">
+        <div class="map-top">
+          <div class="search white">搜附近钓虾点</div>
+          <div class="quick-filters compact"><span class="active">全部</span><span>免费</span><span>亲子</span></div>
+        </div>
+        <div class="map-bg">
+          <span class="pin pin-red">🦞</span>
+          <span class="pin pin-green">🦞</span>
+          <span class="pin pin-orange">🦞</span>
+          <span class="pin pin-blue">🦞</span>
+        </div>
+        <article class="map-card">
+          <div class="spot-image image-1"></div>
+          <div class="spot-info">
+            <h3>溪边小龙虾垂钓园</h3>
+            <div class="tags"><span>出虾多</span><span>停车方便</span></div>
+            <p>3.2km · 今日 5 人反馈 · 傍晚推荐</p>
+            <button>查看详情</button>
+          </div>
+        </article>
+        <nav class="tabbar"><span>首页</span><span class="on">地图</span><span class="publish">＋</span><span>我的</span></nav>
+      </div>
+      <p class="caption">地图页</p>
+    </section>
+
+    <section class="phone">
+      <div class="screen detail-screen">
+        <div class="detail-cover image-1">
+          <button class="back">‹</button>
+          <button class="share">分享</button>
+        </div>
+        <section class="detail-content">
+          <h1>溪边小龙虾垂钓园</h1>
+          <p class="muted">杭州市余杭区 · 距你 3.2km</p>
+          <div class="action-row">
+            <button class="primary">导航去这里</button>
+            <button class="ghost">收藏</button>
+          </div>
+          <div class="tags big"><span>出虾多</span><span>亲子友好</span><span>有厕所</span><span>停车方便</span></div>
+
+          <section class="shrimp-status">
+            <div>
+              <p>今日虾况</p>
+              <strong>不错，傍晚适合冲</strong>
+              <small>5 人反馈 · 平均钓获 18 只</small>
+            </div>
+            <div class="status-score">4.6</div>
+          </section>
+
+          <section class="info-grid">
+            <div><strong>28 元</strong><span>人均</span></div>
+            <div><strong>17:00</strong><span>推荐时间</span></div>
+            <div><strong>4.8</strong><span>亲子指数</span></div>
+          </section>
+
+          <section class="module compact-module">
+            <h2>最新打卡</h2>
+            <div class="checkin">
+              <div class="avatar"></div>
+              <div><strong>小丸子爸爸</strong><p>带娃钓了 23 只，水边有护栏，推荐猪肝。</p></div>
+            </div>
+          </section>
+        </section>
+      </div>
+      <p class="caption">钓点详情页</p>
+    </section>
+
+    <section class="phone">
+      <div class="screen form-screen">
+        <header class="page-header"><h1>发布打卡</h1><p>今天的虾况怎么样？</p></header>
+        <section class="form-card">
+          <label>钓到多少只</label>
+          <div class="counter"><button>-</button><strong>18</strong><button>+</button></div>
+        </section>
+        <section class="form-card">
+          <label>出虾情况</label>
+          <div class="choice-grid"><button>爆护</button><button class="selected">不错</button><button>一般</button><button>较少</button></div>
+        </section>
+        <section class="form-card">
+          <label>推荐时间段</label>
+          <div class="chips"><span>上午</span><span>下午</span><span class="active">傍晚</span><span>夜晚</span></div>
+        </section>
+        <section class="form-card">
+          <label>使用饵料</label>
+          <div class="chips"><span class="active">猪肝</span><span>鸡肠</span><span>火腿肠</span><span>其他</span></div>
+        </section>
+        <section class="upload-box">＋ 上传现场照片</section>
+        <button class="submit">发布打卡</button>
+      </div>
+      <p class="caption">发布打卡页</p>
+    </section>
+  </main>
+</body>
+</html>

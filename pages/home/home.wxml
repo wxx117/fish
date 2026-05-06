@@ -1,0 +1,57 @@
+<view class="container home-page">
+  <view class="hero">
+    <view class="topbar">
+      <button class="city">{{city}}</button>
+      <view class="search">搜索钓点 / 农家乐</view>
+    </view>
+    <view class="hero-title">今天去哪儿钓虾？</view>
+    <view class="hero-desc">发现附近真实虾况，周末带娃不踩坑</view>
+  </view>
+
+  <scroll-view scroll-x class="filter-scroll" show-scrollbar="false">
+    <view class="filter-row">
+      <view
+        wx:for="{{filters}}"
+        wx:key="*this"
+        class="chip {{activeFilter === item ? 'active' : ''}}"
+        data-value="{{item}}"
+        bindtap="selectFilter"
+      >{{item}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="weather-card card" bindtap="goMap">
+    <view>
+      <view class="weather-title">今日虾况不错</view>
+      <view class="weather-desc">傍晚 17:00 后更容易上虾</view>
+    </view>
+    <view class="crayfish">🦞</view>
+  </view>
+
+  <view class="section">
+    <view class="section-title">
+      <text>本周热门</text>
+      <text bindtap="goMap">查看全部</text>
+    </view>
+
+    <view
+      wx:for="{{spots}}"
+      wx:key="id"
+      class="spot-card card {{index === 0 ? 'large' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="goDetail"
+    >
+      <view class="spot-image image-{{item.theme}}">
+        <text>🦞</text>
+      </view>
+      <view class="spot-info">
+        <view class="spot-name">{{item.name}}</view>
+        <view class="tags">
+          <text wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag" class="tag">{{tag}}</text>
+        </view>
+        <view class="spot-meta">距你 {{item.distance}} · {{item.price}} · {{item.latest}}</view>
+        <view class="score">🦞🦞🦞🦞☆ {{item.score}}</view>
+      </view>
+    </view>
+  </view>
+</view>

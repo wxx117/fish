@@ -1,0 +1,53 @@
+<view class="detail-page" wx:if="{{spot}}">
+  <view class="detail-cover image-{{spot.theme}}">
+    <button class="share" open-type="share">分享</button>
+    <text>🦞</text>
+  </view>
+
+  <view class="detail-content">
+    <view class="title">{{spot.name}}</view>
+    <view class="muted">{{spot.address}} · 距你 {{spot.distance}}</view>
+
+    <view class="action-row">
+      <button class="primary-btn nav-btn" bindtap="openLocation">导航去这里</button>
+      <button class="ghost-btn fav-btn" bindtap="toggleFavorite">收藏</button>
+    </view>
+
+    <view class="tags big">
+      <text wx:for="{{spot.tags}}" wx:key="*this" class="tag {{index === 0 ? 'active' : ''}}">{{item}}</text>
+    </view>
+
+    <view class="shrimp-status">
+      <view>
+        <view class="status-label">今日虾况</view>
+        <view class="status-title">{{spot.catchText}}</view>
+        <view class="status-desc">{{spot.feedbackCount}} 人反馈 · 平均钓获 {{spot.catchCount}} 只</view>
+      </view>
+      <view class="status-score">{{spot.score}}</view>
+    </view>
+
+    <view class="info-grid">
+      <view class="info-item"><text>{{spot.price}}</text><text>人均</text></view>
+      <view class="info-item"><text>{{spot.recommendTime}}</text><text>推荐时间</text></view>
+      <view class="info-item"><text>{{spot.childScore}}</text><text>亲子指数</text></view>
+    </view>
+
+    <view class="safety-card">
+      <view class="safety-title">亲子安全提醒</view>
+      <view class="safety-desc">水边玩耍请家长全程陪同，野外钓点请确认是否允许进入，不建议食用污染水域小龙虾。</view>
+    </view>
+
+    <view class="section compact-section">
+      <view class="section-title"><text>最新打卡</text><text bindtap="goCheckin">我来打卡</text></view>
+      <view wx:for="{{checkins}}" wx:key="user" class="checkin">
+        <view class="avatar"></view>
+        <view class="checkin-body">
+          <view class="checkin-user">{{item.user}}</view>
+          <view class="checkin-text">{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+
+    <button class="primary-btn sticky-checkin" bindtap="goCheckin">我来打卡</button>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# WeChat DevTools
+miniprogram_npm/
+.DS_Store
+*.log
+app.miniapp.json
+project.miniapp.json
+i18n/
+miniapp/
+pages/project.config.json
+pages/project.private.config.json
+
+# local settings
+.project.private.config.json
+project.private.config.json
+**/project.private.config.json
+
+# OS / IDE
+.vscode/
+.idea/
+Thumbs.db

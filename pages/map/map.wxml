@@ -1,0 +1,36 @@
+<view class="map-page">
+  <view class="map-top">
+    <view class="search white">搜附近钓虾点</view>
+    <view class="filter-row">
+      <view
+        wx:for="{{filters}}"
+        wx:key="*this"
+        class="chip {{activeFilter === item ? 'active' : ''}}"
+        data-value="{{item}}"
+        bindtap="selectFilter"
+      >{{item}}</view>
+    </view>
+  </view>
+
+  <view class="fake-map">
+    <view
+      wx:for="{{pins}}"
+      wx:key="id"
+      class="pin {{item.className}}"
+      data-id="{{item.id}}"
+      bindtap="selectPin"
+    >{{item.label}}</view>
+  </view>
+
+  <view class="map-card" wx:if="{{selected}}">
+    <view class="spot-image image-{{selected.theme}}">🦞</view>
+    <view class="spot-info">
+      <view class="spot-name">{{selected.name}}</view>
+      <view class="tags">
+        <text wx:for="{{selected.tags}}" wx:key="*this" wx:for-item="tag" class="tag">{{tag}}</text>
+      </view>
+      <view class="spot-meta">{{selected.distance}} · 今日 {{selected.feedbackCount}} 人反馈 · 傍晚推荐</view>
+      <button class="detail-btn" bindtap="goDetail">查看详情</button>
+    </view>
+  </view>
+</view>
