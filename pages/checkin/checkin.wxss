@@ -43,11 +43,15 @@
 .counter button {
   width: 84rpx;
   height: 84rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 32rpx;
   color: #f24e2e;
   background: #fff1e9;
   font-size: 44rpx;
   font-weight: 900;
+  line-height: 84rpx;
 }
 
 .counter text {
@@ -63,11 +67,15 @@
 
 .choice {
   height: 84rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 30rpx;
   color: #52606d;
   background: #f6f8fa;
   font-size: 28rpx;
   font-weight: 800;
+  line-height: 84rpx;
 }
 
 .choice.selected {

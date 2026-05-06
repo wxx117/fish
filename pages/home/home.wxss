@@ -18,12 +18,16 @@
 
 .city {
   height: 76rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 28rpx;
   border-radius: 38rpx;
   color: #ffffff;
   background: rgba(255, 255, 255, 0.22);
   font-size: 26rpx;
   font-weight: 800;
+  line-height: 76rpx;
 }
 
 .search {
@@ -36,6 +40,7 @@
   color: #9aa5b1;
   background: #ffffff;
   font-size: 26rpx;
+  line-height: 80rpx;
 }
 
 .hero-title {

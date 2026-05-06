@@ -28,6 +28,7 @@
   color: #9aa5b1;
   font-size: 24rpx;
   font-weight: 800;
+  line-height: 112rpx;
 }
 
 .tab-item.active {
@@ -49,7 +50,7 @@
   color: #ffffff;
   background: linear-gradient(135deg, #f24e2e, #ff8a3d);
   font-size: 48rpx;
-  line-height: 76rpx;
+  line-height: 1;
   font-weight: 900;
 }
 
@@ -57,6 +58,7 @@
   color: #9aa5b1;
   font-size: 20rpx;
   font-weight: 800;
+  line-height: 24rpx;
 }
 
 .tab-item.active .publish-label {
